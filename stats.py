@@ -4,7 +4,7 @@ def get_num_words(text):
     words = text.split()
     for count in words:
         word_count += 1
-    print(f"{word_count} words found in the document")
+    return word_count
 
 def symbol_count(text):
     lower_case_book = str.lower(text)
@@ -14,8 +14,16 @@ def symbol_count(text):
             symbols[letter] += 1
         else:
             symbols[letter] = 1
-    print(symbols)
+    return symbols
 
-def sorting_letters(dict):
-    
-    
+def create_char_count_list(symbols):
+    char_count_list = []
+    for char, count in symbols.items():
+        if char.isalpha():
+            char_count_list.append({"char": char, "count": count})
+    return char_count_list
+
+def sort_on(char_dict):
+    return char_dict["count"]
+
+
