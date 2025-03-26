@@ -8,8 +8,6 @@ else:
     print("Usage: python3 main.py <path_to_book>")
     sys.exit(1)
 
-
-
 def get_book_text(filepath):
     with open(filepath) as f:
         return f.read()
